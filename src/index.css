@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-dark: #6366F1;
+  --color-accent-light: #4F46E5;
+  --color-background-dark: #0B0F19;
+  --color-background-light: #ffffff;
+  --color-text-dark: #ffffff;
+  --color-text-light: #0B0F19;
+}
+
+@layer base {
+  :root {
+    --bg-color: var(--color-background-light);
+    --text-color: var(--color-text-light);
+    --accent-color: var(--color-accent-light);
+  }
+
+  .dark {
+    --bg-color: var(--color-background-dark);
+    --text-color: var(--color-text-dark);
+    --accent-color: var(--color-accent-dark);
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom utility classes */
+  .glass-card-dark {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card-light {
+    background-color: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-nav-dark {
+    background-color: rgba(11, 15, 25, 0.7);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-nav-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
