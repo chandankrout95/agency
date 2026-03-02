@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ParticleBackground } from '../components/3d/ParticleBackground';
 import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
+import { Star } from 'lucide-react';
 
 export function HeroSection() {
     return (
@@ -33,6 +34,30 @@ export function HeroSection() {
                             Digital Products
                         </span>
                     </h1>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                        className="flex items-center justify-center gap-2 mb-8"
+                    >
+                        <div className="flex -space-x-3">
+                            <div className="w-10 h-10 rounded-full border-2 border-[var(--bg-color)] bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-xs font-bold text-white shadow-lg">JS</div>
+                            <div className="w-10 h-10 rounded-full border-2 border-[var(--bg-color)] bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center text-xs font-bold text-white shadow-lg">AL</div>
+                            <div className="w-10 h-10 rounded-full border-2 border-[var(--bg-color)] bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-xs font-bold text-white shadow-lg">MK</div>
+                            <div className="w-10 h-10 rounded-full border-2 border-[var(--bg-color)] bg-white/10 backdrop-blur-md flex items-center justify-center text-xs font-bold shadow-lg text-[var(--text-color)]">+</div>
+                        </div>
+                        <div className="flex flex-col items-start ml-2 text-sm text-[var(--text-color)]/80">
+                            <div className="flex text-yellow-500">
+                                <Star size={14} fill="currentColor" />
+                                <Star size={14} fill="currentColor" />
+                                <Star size={14} fill="currentColor" />
+                                <Star size={14} fill="currentColor" />
+                                <Star size={14} fill="currentColor" />
+                            </div>
+                            <span className="font-medium mt-0.5">Trusted by 10+ Happy Clients</span>
+                        </div>
+                    </motion.div>
 
                     <p className="text-lg md:text-2xl text-[var(--text-color)]/70 max-w-2xl mx-auto mb-10 font-light">
                         Full Stack • Mobile Apps • AI/ML • UI/UX

@@ -2,6 +2,7 @@ import { HeroSection } from '../sections/HeroSection';
 import { AnimatedMarquee } from '../components/ui/AnimatedMarquee';
 import { ServicesSection } from '../sections/ServicesSection';
 import { ContactSection } from '../sections/ContactSection';
+import { TestimonialSection } from '../sections/TestimonialSection';
 import { motion } from 'framer-motion';
 
 export function Home() {
@@ -21,6 +22,7 @@ export function Home() {
 
             <AnimatedMarquee />
             <ServicesSection />
+            <TestimonialSection />
             <ContactSection />
         </motion.div>
     );
