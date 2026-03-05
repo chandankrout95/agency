@@ -28,7 +28,7 @@ export function HeroSection() {
                         Digital Excellence from Bhubaneswar to the World
                     </motion.div>
 
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-black to-black/70 dark:from-white dark:to-white/70 leading-[1.1]">
+                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[var(--text-color)] to-[var(--text-color)]/70 leading-[1.1]">
                         We Build Scalable <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color)] to-purple-500">
                             Digital Products

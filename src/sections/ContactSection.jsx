@@ -49,7 +49,11 @@ export function ContactSection() {
                             </div>
                             <div className="flex items-center gap-4 text-[var(--text-color)]/80">
                                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">✉️</div>
-                                <span>hello@agency.com</span>
+                                <span>psyducq.co@gmail.com</span>
+                            </div>
+                            <div className="flex items-center gap-4 text-[var(--text-color)]/80">
+                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">📞</div>
+                                <span>8797125563</span>
                             </div>
                         </div>
                     </motion.div>

@@ -41,7 +41,7 @@ export function Navbar() {
             >
                 <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
                     <Link to="/" className="text-2xl font-bold tracking-tighter">
-                        AGENCY<span className="text-[var(--accent-color)]">.</span>
+                        psyducq<span className="text-[var(--accent-color)]">.</span>
                     </Link>
 
                     {/* Desktop Nav */}
