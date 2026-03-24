@@ -8,6 +8,7 @@ import { MouseFollowHighlight } from './components/ui/MouseFollowHighlight';
 import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { Services } from './pages/Services';
+import { ServiceDetails } from './pages/ServiceDetails';
 import { ContactUs } from './pages/ContactUs';
 
 function AnimatedRoutes() {
@@ -18,6 +19,7 @@ function AnimatedRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/service/:id" element={<ServiceDetails />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </AnimatePresence>

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlassCard } from '../components/ui/GlassCard';
 import {
@@ -9,24 +10,28 @@ import {
 
 const SERVICES = [
     {
+        id: "web-development",
         title: "Full Stack Web Development",
         description: "Scalable, high-performance web applications built from scratch with modern frameworks like React, Node, and Postgres.",
         icon: <MonitorSmartphone className="w-10 h-10 mb-4 text-[var(--accent-color)]" />,
         delay: 0.1
     },
     {
+        id: "mobile-development",
         title: "Mobile App Development",
         description: "Cross-platform mobile applications that run smoothly on iOS and Android, built with React Native and Flutter.",
         icon: <Smartphone className="w-10 h-10 mb-4 text-[var(--accent-color)]" />,
         delay: 0.2
     },
     {
+        id: "ai-ml",
         title: "AI & ML Solutions",
         description: "Intelligent systems and models tailored to solve complex business logic, enhance automation, and drive insight.",
         icon: <Cpu className="w-10 h-10 mb-4 text-[var(--accent-color)]" />,
         delay: 0.3
     },
     {
+        id: "ui-ux",
         title: "UI/UX Design",
         description: "Stunning, human-centric design focusing on user retention, accessibility, and modern aesthetics like glassmorphism.",
         icon: <Palette className="w-10 h-10 mb-4 text-[var(--accent-color)]" />,
@@ -35,6 +40,7 @@ const SERVICES = [
 ];
 
 export function ServicesSection() {
+    const navigate = useNavigate();
     return (
         <section className="py-32 relative z-10">
             <div className="container mx-auto px-6">
@@ -74,9 +80,12 @@ export function ServicesSection() {
                                     {service.description}
                                 </p>
                                 <div className="mt-8">
-                                    <span className="text-sm font-medium text-[var(--accent-color)] flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer">
+                                    <button 
+                                        onClick={() => navigate(`/service/${service.id}`)}
+                                        className="text-sm font-medium text-[var(--accent-color)] flex items-center gap-2 group-hover:gap-3 transition-all cursor-pointer"
+                                    >
                                         Learn More <span>→</span>
-                                    </span>
+                                    </button>
                                 </div>
                             </GlassCard>
                         </motion.div>
